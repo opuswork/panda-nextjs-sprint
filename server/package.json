@@ -1,0 +1,21 @@
+{
+  "name": "sprint5-react-server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Express backend server for sprint5-react",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11",
+    "prisma": "^5.0.0"
+  }
+}

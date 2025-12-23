@@ -1,0 +1,140 @@
+GET http://localhost:3000/products
+
+### GET Tags
+GET http://localhost:3000/tags
+
+###
+
+GET http://localhost:3000/products/d63662f8-88e5-45b8-8167-71e23c25e9a5
+
+###
+
+POST http://localhost:3000/products
+Content-Type: application/json
+
+    {
+      "id": "5671e902-d0be-4968-88c8-e077c3308c74",
+      "name": "여성 겨울 패딩",
+      "description": "여성 가을 신상품 전체",
+      "category": "FASHION",
+      "price": 120000,
+      "stock": 10,
+      "images": "/src/assets/products/default.png",
+      "favoriteCount": 0,
+      "createdAt": "2025-11-14T13:26:09.178Z",
+      "updatedAt": "2025-11-14T13:26:09.178Z",
+      "tags": []
+    },
+    {
+      "id": "d63662f8-88e5-45b8-8167-71e23c25e9a5",
+      "name": "여성 겨울 패딩",
+      "description": "여성 가을 신상품 전체",
+      "category": "FASHION",
+      "price": 120000,
+      "stock": 10,
+      "images": "/src/assets/products/default.png",
+      "favoriteCount": 0,
+      "tags": []
+    },
+    {
+      "id": "34e7bc1b-23fb-491f-930b-4ab1911ec82f",
+      "name": "여성 겨울 패딩",
+      "description": "여성 가을 신상품 전체",
+      "category": "FASHION",
+      "price": 120000,
+      "stock": 10,
+      "images": "/src/assets/products/default.png",
+      "favoriteCount": 0,
+      "tags": []
+    },
+    {
+      "id": "0c79dde2-bf48-431a-b748-01f4f6da051c",
+      "name": "여성 겨울 패딩",
+      "description": "여성 가을 신상품 전체",
+      "category": "FASHION",
+      "price": 120000,
+      "stock": 10,
+      "images": "/src/assets/products/default.png",
+      "favoriteCount": 0,
+      "tags": []
+    },
+    {
+      "id": "ff8811ed-b0e5-462a-b277-9bcaa81e14a5",
+      "name": "여성 겨울 패딩",
+      "description": "여성 가을 신상품 전체",
+      "category": "FASHION",
+      "price": 120000,
+      "stock": 10,
+      "images": "/src/assets/products/default.png",
+      "favoriteCount": 0,
+      "tags": []
+    },
+    {
+      "id": "9afd33e5-7613-42d6-8371-b8d017deeb18",
+      "name": "여성 겨울 패딩",
+      "description": "여성 가을 신상품 전체",
+      "category": "FASHION",
+      "price": 120000,
+      "stock": 10,
+      "images": "/src/assets/products/default.png",
+      "favoriteCount": 0,
+      "tags": []
+    },
+    {
+      "id": "b38b0ee8-e040-4671-ab26-737940ed42dd",
+      "name": "여성 겨울 패딩",
+      "description": "여성 가을 신상품 전체",
+      "category": "FASHION",
+      "price": 120000,
+      "stock": 10,
+      "images": "/src/assets/products/default.png",
+      "favoriteCount": 0,
+      "tags": []
+    },
+    {
+      "id": "253d3690-a055-42b5-9473-c13d54df85f8",
+      "name": "여성 겨울 패딩",
+      "description": "여성 가을 신상품 전체",
+      "category": "FASHION",
+      "price": 120000,
+      "stock": 10,
+      "images": "/src/assets/products/default.png",
+      "favoriteCount": 0,
+      "tags": []
+    },
+    {
+      "id": "c44cdd4e-0d70-4612-8ff5-3636227748f2",
+      "name": "여성 겨울 패딩",
+      "description": "여성 가을 신상품 전체",
+      "category": "FASHION",
+      "price": 120000,
+      "stock": 10,
+      "images": "/src/assets/products/default.png",
+      "favoriteCount": 0,
+      "tags": []
+    },
+    {
+      "id": "32901300-1066-4ab5-9e13-46e77f15c003",
+      "name": "여성 겨울 패딩",
+      "description": "여성 가을 신상품 전체",
+      "category": "FASHION",
+      "price": 120000,
+      "stock": 10,
+      "images": "/src/assets/products/default.png",
+      "favoriteCount": 0,
+      "tags": []
+    }
+
+###
+
+PATCH http://localhost:3000/products/62fb5b26-8484-4c15-bd5a-98c7167081ec
+Content-Type: application/json
+
+{
+  "price": 65000,
+  "stock": 2
+}
+
+###
+
+DELETE http://localhost:3000/products/62fb5b26-8484-4c15-bd5a-98c7167081ec

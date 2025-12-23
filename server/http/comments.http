@@ -1,0 +1,23 @@
+POST http://localhost:3000/articles/da5433b1-7f7f-4fd8-8519-bf67eb8a6b3d/comments
+Content-Type: application/json
+
+{
+    "content": "댓글 내용66666666666666666666666666",
+    "articleId": "da5433b1-7f7f-4fd8-8519-bf67eb8a6b3d"
+}
+
+###
+
+GET http://localhost:3000/comments
+
+###
+
+PATCH http://localhost:3000/articles/da5433b1-7f7f-4fd8-8519-bf67eb8a6b3d/comments/29847899-52fa-4208-bf14-f06d8e0f94f3
+Content-Type: application/json
+
+{
+    "content": "댓글 내용----수정이 되니????????",
+    "articleId": "da5433b1-7f7f-4fd8-8519-bf67eb8a6b3d"
+}
+
+###

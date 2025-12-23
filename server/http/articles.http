@@ -1,0 +1,20 @@
+POST http://localhost:3000/articles
+Content-Type: application/json
+
+    {
+      "title": "우리집 컴퓨터, 마우스 팔고 싶어요!",
+      "author": "나도 판다",
+      "content": "님들은 어케 생각하삼!",
+      "image": "/src/assets/products/default.png"
+    }
+
+###
+
+GET http://localhost:3000/articles
+
+###
+
+GET http://localhost:3000/articles/5e63876a-73f7-4866-8487-ffb4ba59f54d
+
+###
+PUT http://localhost:3000/articles/6823d70c-8b4e-4663-9f2f-ad857bf0068b

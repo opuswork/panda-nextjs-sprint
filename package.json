@@ -13,6 +13,7 @@
     "prisma:migrate:deploy": "cd server && npx prisma migrate deploy"
   },
   "dependencies": {
+    "@prisma/adapter-pg": "^7.2.0",
     "@prisma/client": "^7.1.0",
     "next": "16.0.10",
     "react": "19.2.1",

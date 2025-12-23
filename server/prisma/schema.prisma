@@ -1,0 +1,133 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql" // 또는 "mysql", "sqlite" 등 사용하는 DB에 맞게 변경
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String @id @default(uuid())
+  email     String @unique
+  firstName String
+  lastName  String
+  nickname  String?
+  password  String
+  address   String?
+  image     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  orders    Order[]
+}
+
+model UserPreference {
+  id           String   @id @default(uuid())
+  receiveEmail Boolean
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Order {
+  id        String      @id @default(uuid())
+  status    OrderStatus @default(PENDING)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  user      User        @relation(fields: [userId], references: [id])
+  userId    String
+}
+enum OrderStatus {
+  PENDING
+  COMPLETE
+}
+model OrderItem {
+  id        String   @id @default(uuid())
+  unitPrice Float
+  quantity  Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Product {
+  id          String   @id @default(uuid())
+  name        String
+  description String?
+  category    Category
+  price       Float
+  stock       Int
+  image       String?
+  favoriteCount Int    @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+// 새로 추가된 관계 필드: 이 상품에 연결된 ProductTag 목록
+  tags        ProductTag[]
+}
+
+enum Category {
+  FASHION
+  BEAUTY
+  SPORTS
+  ELECTRONICS
+  HOME_INTERIOR
+  HOUSEHOLD_SUPPLIES
+  KITCHENWARE
+}
+
+
+// ------------------------------------------------------------------
+// 새로 추가된 Tag 모델
+// ------------------------------------------------------------------
+model Tag {
+  id          String    @id @default(uuid())
+  name        String    @unique // 태그 이름은 고유해야 합니다 (예: '할인', '신상', '겨울옷')
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // 새로 추가된 관계 필드: 이 태그를 사용하는 ProductTag 목록
+  products    ProductTag[]
+}
+
+// ------------------------------------------------------------------
+// 다대다(Many-to-Many) 관계를 연결하는 연결(Junction) 모델
+// ------------------------------------------------------------------
+model ProductTag {
+  productId   String
+  product     Product   @relation(fields: [productId], references: [id])
+  
+  tagId       String
+  tag         Tag       @relation(fields: [tagId], references: [id])
+
+  createdAt   DateTime @default(now())
+  
+  // 두 필드를 합쳐 복합 기본 키(Compound Primary Key)를 정의합니다.
+  // 이로써 하나의 상품에 같은 태그가 중복해서 연결되는 것을 방지합니다.
+  @@id([productId, tagId]) 
+}
+
+
+model Article {
+  id        String    @id @default(uuid())
+  author    String    @default("")
+  title     String    @default("")
+  content   String    @default("")
+  image     String?               // ← 이미지 파일명 또는 경로 저장
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  comments  Comment[]
+}
+
+model Comment {
+  id        String    @id @default(uuid())
+  content   String
+  author    String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  articleId String
+  article   Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
+}

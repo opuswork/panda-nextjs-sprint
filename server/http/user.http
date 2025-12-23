@@ -1,0 +1,50 @@
+GET http://localhost:3000/users
+
+###
+
+GET http://localhost:3000/users/f3e06c4e-bb1b-4a86-87ad-06700b154bc8
+
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "email": "mjohnson@codeit.com", 
+  "firstName": "Micheal",
+  "lastName": "Johnson",
+  "nickname": "JMac",
+  "password": "asdfg12345",
+  "address": "10000 Madision Sq, New York, NY"
+}
+
+9aecb5c2-09a0-44a1-b1cf-b7fa2593287f
+
+###
+PATCH http://localhost:3000/users/9aecb5c2-09a0-44a1-b1cf-b7fa2593287f
+Content-Type: application/json
+
+{
+  "password": "62862604c542a3296d506cf1a95419f167f52801fe53408ad3ea8adb00f25431",
+}
+
+###
+
+PATCH http://localhost:3000/users/f3e06c4e-bb1b-4a86-87ad-06700b154bc8
+Content-Type: application/json
+
+{
+  "email": "malania.hons@gmail.com", 
+  "firstName": "Malania",
+  "lastName": "Hons",
+  "nickname": "Honnie",
+  "password": "securepassword123",
+  "address": "1022 Alison Dr, New York, NY"
+}
+
+###
+
+DELETE http://localhost:3000/users/07f59ba5-563f-4c5d-8a85-4bc0af657c4b
+
+
+
