@@ -1,0 +1,236 @@
+.productDetailContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 92px; /* 헤더 높이(72px) + 여유 공간(20px) */
+  }
+  
+  .productDetailHeader {
+    margin-bottom: 30px;
+  }
+  
+  .backButton {
+    background: #4F46E5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  .backButton:hover {
+    background: #4338CA;
+  }
+  
+  .productDetailLoading,
+  .productDetailError {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .productDetailError {
+    color: #DC2626;
+  }
+  
+  .productDetailContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+  }
+  
+  .productDetailImageSection {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+  }
+  
+  .productDetailImage {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .productDetailInfoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .productDetailCategory {
+    display: inline-block;
+    background: #E5E7EB;
+    color: #6B7280;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    width: fit-content;
+  }
+  
+  .productDetailTitleSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .productDetailName {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+    line-height: 1.2;
+    flex: 1;
+  }
+  
+  .editButton {
+    background: #4F46E5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s;
+    white-space: nowrap;
+  }
+  
+  .editButton:hover {
+    background: #4338CA;
+  }
+  
+  .productDetailDescription {
+    margin-top: 10px;
+  }
+  
+  .productDetailDescription h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 10px;
+  }
+  
+  .productDetailDescription p {
+    font-size: 16px;
+    color: #6B7280;
+    line-height: 1.6;
+    white-space: pre-wrap;
+  }
+  
+  .productDetailPriceSection {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #E5E7EB;
+    border-bottom: 1px solid #E5E7EB;
+  }
+  
+  .productDetailPrice {
+    font-size: 36px;
+    font-weight: 700;
+    color: #4F46E5;
+  }
+  
+  .productDetailFavorite {
+    font-size: 18px;
+    color: #6B7280;
+  }
+  
+  .productDetailStock {
+    font-size: 18px;
+    color: #374151;
+  }
+  
+  .productDetailTags {
+    margin-top: 10px;
+  }
+  
+  .productDetailTags h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 12px;
+  }
+  
+  .tagsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .tagItem {
+    background: #EEF2FF;
+    color: #4F46E5;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .productDetailMeta {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #E5E7EB;
+  }
+  
+  .productDetailDate {
+    font-size: 14px;
+    color: #6B7280;
+    margin-bottom: 8px;
+  }
+  
+  .productDetailDate strong {
+    color: #374151;
+    margin-right: 8px;
+  }
+  
+  /* 모바일 반응형 */
+  @media (max-width: 768px) {
+    .productDetailContainer {
+      padding: 15px;
+      padding-top: 76px; /* 모바일 헤더 높이(56px) + 여유 공간(20px) */
+    }
+  
+    .productDetailContent {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  
+    .productDetailImageSection {
+      position: static;
+    }
+  
+    .productDetailTitleSection {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+  
+    .productDetailName {
+      font-size: 24px;
+    }
+  
+    .editButton {
+      width: 100%;
+    }
+  
+    .productDetailPrice {
+      font-size: 28px;
+    }
+  
+    .productDetailPriceSection {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+  
+  

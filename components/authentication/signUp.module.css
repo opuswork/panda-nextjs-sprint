@@ -1,0 +1,140 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    color: #374151;
+    font-family: "Pretendard", sans-serif;
+  }
+  
+  .title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: #1F2937;
+  }
+  
+  .form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* ✅ NEW: Name Row Container */
+  .nameRow {
+    display: flex;
+    gap: 12px; /* Space between First and Last name */
+    width: 100%;
+    margin-bottom: 0px; 
+  }
+  
+  /* ✅ NEW: 50% width container for names */
+  .halfInput {
+    flex: 1; /* Makes them equal width */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label {
+    font-weight: 700;
+    color: #2c2c2c;
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .inputWrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .inputField {
+    background-color: #F3F4F6;
+    border: 1px solid transparent;
+    color: #333;
+    font-size: 16px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .inputField:focus {
+    border-color: #3692ff;
+    background-color: #fff;
+  }
+  
+  .inputError {
+    border: 1px solid #ef4444 !important;
+    background-color: #fef2f2;
+  }
+  
+  .eyeIcon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .errorMessage {
+    color: #ef4444;
+    font-size: 14px;
+    min-height: 20px;
+    margin-top: 4px;
+    display: none;
+  }
+  
+  .showError {
+    display: block;
+  }
+  
+  .submitButton {
+    background: #3692ff;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 24px;
+    padding: 16px;
+    width: 100%;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .submitButton:hover {
+    background-color: #1967d6;
+  }
+  
+  .membership {
+    font-size: 14px;
+    color: #1F2937;
+    text-align: center;
+  }
+  
+  .membership a {
+    color: #3182f6;
+    text-decoration: underline;
+    margin-left: 5px;
+  }
+
+  .socialLogin {
+    background-color: #E6F2FF;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1F2937;
+    padding: 16px 23px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }

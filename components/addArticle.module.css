@@ -1,0 +1,225 @@
+.addArticleContainer { 
+    min-height: calc(100vh - 144px);
+    padding-top: 0px;
+    background-color: #ffffff;
+    margin-top: 80px !important;
+  }
+  
+  .addArticleWrapper {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 10px 16px;
+  }
+  
+  .addArticleHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  .addArticleHeaderButtons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .addArticleTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1F2937;
+    margin: 0;
+  }
+  
+  .addArticleSubmitBtn {
+    background: #9CA3AF;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 16px 24px;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .addArticleSubmitBtn:hover:not(:disabled) {
+    background: #6B7280;
+  }
+  
+  .addArticleSubmitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .addArticleForm {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .addArticleError {
+    background-color: #FEE2E2;
+    color: #DC2626;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .addArticleField {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .addArticleLabel {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1F2937;
+  }
+  
+  .addArticleInput,
+  .addArticleTextarea {
+    width: 100%;
+    padding: 12px 16px;
+    background: #F3F4F6;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    color: #1F2937;
+    box-sizing: border-box;
+  }
+  
+  .addArticleInput::placeholder,
+  .addArticleTextarea::placeholder {
+    color: #9CA3AF;
+  }
+  
+  .addArticleInput:focus,
+  .addArticleTextarea:focus {
+    outline: none;
+    border-color: #3692ff;
+    background: #ffffff;
+  }
+  
+  .addArticleTextarea {
+    resize: vertical;
+    min-height: 200px;
+  }
+  
+  .addArticleImageUpload {
+    width: 100%;
+  }
+  
+  .addArticleImagePlaceholder {
+    width: 100%;
+    min-height: 300px;
+    background: #F3F4F6;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .addArticleImagePlaceholder:hover {
+    background: #E5E7EB;
+  }
+  
+  .addArticleImageIcon {
+    font-size: 48px;
+    font-weight: 300;
+    color: #1F2937;
+    line-height: 1;
+  }
+  
+  .addArticleImageText {
+    font-size: 16px;
+    color: #6B7280;
+    font-weight: 500;
+  }
+  
+  .addArticleImagePreview {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    background: #F3F4F6;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .addArticleImagePreview img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 500px;
+  }
+  
+  .addArticleImageRemove {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+  }
+  
+  .addArticleImageRemove:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+
+  .addArticleCancelBtn {
+    background: #6B7280;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 16px 24px;
+    border-radius: 18px;
+  }
+
+
+  /* Responsive */
+  @media (max-width: 768px) {
+
+    .addArticleContainer {
+      padding-top: 0px;
+    }
+
+    .addArticleWrapper {
+      padding: 10px 16px;
+    }
+  
+    .addArticleHeader {
+      margin-bottom: 40px;
+    }
+  
+    .addArticleTitle {
+      font-size: 20px;
+    }
+  
+    .addArticleSubmitBtn,
+    .addArticleCancelBtn {
+      font-size: 16px;
+      padding: 12px 20px;
+      border-radius: 12px;
+    }
+  }
+  

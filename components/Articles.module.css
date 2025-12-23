@@ -1,0 +1,472 @@
+.articlesMain {
+    margin: 0;
+    padding-top: 0px;
+    min-height: calc(100vh - 144px);
+    background-color: #ffffff;
+    margin-top: 80px !important;
+}
+
+.articlesSection {
+    max-width: 1120px;
+    width: 100%;
+    margin: 10px auto;
+    padding: 0 36px;
+}
+
+.articlesHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.articlesTitle {
+    color: #000000;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 38px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.articlesCount {
+    font-weight: 400;
+    font-size: 16px;
+    color: #6B7280;
+}
+
+.articlesWriteButton {
+    background: #2F80ED;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.articlesWriteButton:hover {
+    background: #1967d6;
+}
+
+.articlesControls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.articlesSearchWrapper {
+    flex: 1;
+}
+
+/* Utility classes */
+.desktopOnly {
+    display: block;
+}
+
+.mobileOnly { 
+    display: none !important;
+}
+
+.articlesSortSelect {
+    text-align: center;
+    height: 40px;
+    padding: 8px 32px 8px 16px;
+    background: #F3F4F6;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #111827;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 7.5L10 12.5L15 7.5' stroke='%236B7280' stroke-width='1.67' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    flex-shrink: 0;
+}
+
+/* Mobile Sort Button */
+.articlesSortMobile {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.articlesSortButton {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background: #F3F4F6;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.articlesSortButton:hover {
+    background: #E5E7EB;
+}
+
+.articlesSortButton img {
+    width: 48px;
+    height: 48px;
+}
+
+/* Sort Dropdown */
+.articlesSortDropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 120px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.sortOption {
+    width: 100%;
+    padding: 12px 16px;
+    background: #ffffff;
+    border: none;
+    text-align: left;
+    font-size: 14px;
+    color: #111827;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.sortOption:hover {
+    background: #F3F4F6;
+}
+
+.sortOption.active {
+    background: #F3F4F6;
+    font-weight: 600;
+    color: #2F80ED;
+}
+
+.articlesList {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.articleCardWrapper {
+    position: relative;
+}
+
+.articleCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    min-height: 120px;
+}
+
+.articleActionsWrapper {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.articleEditBtn,
+.articleDeleteBtn {
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.articleEditBtn {
+    background: #3B82F6;
+    color: white;
+}
+
+.articleEditBtn:hover {
+    background: #2563EB;
+}
+
+.articleDeleteBtn {
+    background: #DC2626;
+    color: white;
+}
+
+.articleDeleteBtn:hover {
+    background: #B91C1C;
+}
+
+.articleCard:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-color: #D1D5DB;
+}
+
+.articleContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex: 1;
+    min-width: 0;
+    align-self: stretch;
+    min-height: 100%;
+}
+
+.articleRowTop {
+    width: 100%;
+}
+
+.articleRowBottom {
+    color: #4B5563;
+    font-family: Pretendard, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: auto;
+}
+
+.articleTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1F2937;
+    margin: 0;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.authorProfileIcon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.authorProfileIcon img {
+    width: 11px;
+    height: 11px;
+    object-fit: contain;
+}
+
+.articleImageWrapper {
+    flex-shrink: 0;
+    width: 120px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #F3F4F6;
+}
+
+.articleImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.articleMeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+    margin-left: 24px;
+    font-size: 14px;
+    color: #6B7280;
+    align-self: stretch;
+    justify-content: flex-start;
+}
+
+.articleAuthor {
+    font-family: Pretendard, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: #4B5563;
+    white-space: nowrap;
+}
+
+.articleDate {
+    font-family: Pretendard, sans-serif;
+    font-size: 11px;
+    color: #9CA3AF;
+}
+
+.articleLikes {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #6B7280;
+}
+
+.articlesLoading,
+.articlesError,
+.articlesEmpty {
+    padding: 40px;
+    text-align: center;
+    color: #6B7280;
+}
+
+.articlesError {
+    color: #DC2626;
+}
+
+.articlesPagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .articlesMain {
+        padding-top: 0px !important;
+    }
+    
+    .desktopOnly {
+        display: none !important;
+    }
+
+    .mobileOnly {
+        display: block !important;
+    }
+
+    .articlesSortMobile.mobileOnly {
+        display: block !important;
+    }
+
+    .articlesSortButton {
+        width: 40px;
+        height: 40px;
+    }
+
+    .articlesSection {
+        padding: 0 20px;
+        margin: 10px auto;
+    }
+
+    .articlesHeader {
+        margin-bottom: 24px;
+    }
+
+    .articlesControls {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .articlesSearchWrapper {
+        width: 100%;
+    }
+
+    /* article-card는 데스크탑과 동일하게 유지 (가로 배치) */
+    .articleCard {
+        padding: 16px;
+    }
+    
+    .articleContent {
+        min-width: 0;
+        flex: 1;
+    }
+
+    /* article-content는 데스크탑과 동일하게 유지 */
+    /* .article-content는 변경하지 않음 */
+
+    /* article-row-top은 데스크탑과 동일하게 유지 */
+    /* .article-row-top은 변경하지 않음 */
+
+    /* article-row-bottom은 데스크탑과 동일하게 유지 */
+    /* .article-row-bottom은 변경하지 않음 */
+
+    /* article-image-wrapper는 데스크탑과 동일하게 유지 */
+    /* .article-image-wrapper는 변경하지 않음 */
+
+    /* article-meta는 데스크탑과 동일하게 유지 (오른쪽에 배치) */
+    .articleMeta {
+        flex-shrink: 0 !important;
+        min-width: 80px !important;
+        width: auto !important;
+        margin-left: 16px;
+        align-items: center !important;
+    }
+
+    /* 모바일에서 제목은 word-wrap으로 표시 */
+    .articleTitle {
+        white-space: normal;
+        word-wrap: break-word;
+        overflow: visible;
+        text-overflow: clip;
+    }
+
+    /* 모바일에서 이미지를 정사각형으로 */
+    .articleImageWrapper {
+        width: 80px !important;
+        height: 80px !important;
+        min-width: 80px !important;
+        min-height: 80px !important;
+        max-width: 80px !important;
+        max-height: 80px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .articleImage {
+        width: 80px !important;
+        height: 80px !important;
+        min-width: 80px !important;
+        min-height: 80px !important;
+        max-width: 80px !important;
+        max-height: 80px !important;
+        object-fit: cover;
+        display: block;
+        flex-shrink: 0 !important;
+    }
+    
+    .articleImageWrapper {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+/* Override SecondHandMarket.css global section:nth-of-type(1) style for Articles page */
+@media (max-width: 480px) {
+
+    .articlesMain {
+        padding-top: 0px !important;
+    }
+
+    .articlesSection {
+        padding: 0 20px !important;
+        margin: 10px auto !important;
+    }
+}

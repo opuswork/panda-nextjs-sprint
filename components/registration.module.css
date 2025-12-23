@@ -1,0 +1,231 @@
+
+/* form CSS below */
+  .registr {
+  
+    margin: 16px auto;
+    max-width: 640px;
+  }
+  
+  .registrTitle {
+    display: flex;
+    justify-content: space-between;
+    color: #1F2937;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  
+  .resTitle {
+    left: 10px;
+  }
+  
+  .registrTitle .resTitle {
+    left: 10px;
+  }
+  
+  .registrTitleButtons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .registrTitleButtonsSecondary {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .registrButton {
+    background: var(--blue);
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 24px 0;
+    padding: 16px 24px;
+    width: auto;
+    border-radius: 18px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .registrButton:hover {
+    background-color: #1967d6;
+  }
+  
+  .registrButton:focus {
+    background-color: #1251aa;
+  }
+  
+  .label {
+      font-weight: 700;
+      color: #2c2c2c;
+      display: block;
+      margin: 16px 0 20px;
+  }
+  
+  .input {
+      background-color: #F3F4F6;
+      border: 0px solid #d1d1d1;
+      color: #ababab;
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 8px 0;
+      padding: 16px 24px;
+      border-radius: 12px;
+      width: 90%;
+  }
+  
+  
+  .input:focus {
+      /* border-color: #3692FF; */
+      outline-color: var(--blue);
+  }
+  
+  
+  
+  /* 에러 상태 스타일 */
+  .input:global(.error) {
+    border: 2px solid #ef4444 !important;
+    background-color: #fef2f2;
+  }
+  
+  .errorMessage {
+    color: #ef4444;
+    font-size: 14px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    min-height: 20px;
+    display: none;
+  }
+  
+  .errorMessage.show {
+    display: block;
+  }
+  
+  /* form CSS below */
+  .productForm {
+  
+    margin: 16px auto;
+    margin-bottom: 100px;
+    max-width: 90%;
+  }
+  
+  
+  
+  /* Responsive - tablet adjustments */
+  @media (max-width: 1199px) {
+    .registrTitle {
+        color: #1F2937;
+        align-items: center;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+  
+  
+  
+  }
+  
+  
+  
+  /* Responsive - mobile adjustments */
+  @media (max-width: 743px) {
+      .registrTitle {
+          color: #1F2937;
+          align-items: center;
+          margin-top: 60px;
+          margin-bottom: 60px;
+          flex-direction: column;
+          gap: 16px;
+      }
+  
+      .registrTitleButtons {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          width: 100%;
+          align-items: center;
+      }
+  
+      .registrTitleButtonsSecondary {
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          width: 100%;
+      }
+  
+      .registr-title-buttons-secondary .registr_button {
+          flex: 1;
+          max-width: 200px;
+      }
+  
+  
+    .socialLogin {
+        background-color: #E6F2FF;
+        border-radius: 8px;
+        margin: 0 auto;
+        max-width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #1F2937;
+        padding: 16px 23px;
+    }
+  
+    /* form CSS below */
+    .productForm {
+      margin: 16px auto;
+      max-width: 90%;
+    }
+  
+  }
+  
+  /* Modal styles */
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .modal.show {
+      display: flex;
+  }
+  
+  .modalContent {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px; /* max screen size */
+      max-height: 350px;  /* max screen size */
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      transform: translateY(0);
+  }
+  
+  
+  .modalContent p {
+      margin-bottom: 25px;
+      color: #666;
+      line-height: 1.5;
+  }
+  
+  .modalBtn {
+      background-color: var(--blue);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background-color 0.2s;
+  }

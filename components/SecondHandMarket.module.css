@@ -1,0 +1,168 @@
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+.searchSection {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 600px;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.productImage {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.productName {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+}
+
+.productPrice {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+.productLikes {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.heartIcon {
+  color: #6b7280;
+}
+
+@media (max-width: 1400px) {
+  .productsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .productsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 499px) {
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .loading {
+    padding: 40px;
+    text-align: center;
+    height: 100vh;
+  }
+
+  .errorMessage { 
+    padding: 40px;
+    text-align: center;
+    color: red;
+  }
+
+  .noResults { 
+    padding: 40px; 
+    text-align: center; 
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  
+  .titleWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .title {
+    margin: 0;
+  }
+  
+  .mobileRegisterButton {
+    display: block;
+  }
+  
+  .searchSection {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (min-width: 500px) {
+  .mobileRegisterButton {
+    display: none;
+  }
+}
+

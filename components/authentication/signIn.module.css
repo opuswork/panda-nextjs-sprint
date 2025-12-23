@@ -1,0 +1,136 @@
+/* fileName: components/authentication/signIn.module.css */
+
+.logoContainer {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    color: #374151;
+    font-family: "Pretendard", sans-serif;
+  }
+  
+  .form {
+    width: 100%;
+    max-width: 400px; /* Limits width on large screens */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label {
+    font-weight: 700;
+    color: #2c2c2c;
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+  
+  /* Changed from 'input' tag to class */
+  .inputField {
+    background-color: #F3F4F6;
+    border: 1px solid transparent;
+    color: #333;
+    font-size: 16px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    width: 100%;
+    outline: none;
+    box-sizing: border-box; /* Important so padding doesn't break width */
+    margin-bottom: 8px;
+  }
+  
+  .inputField:focus {
+    border-color: #3692ff;
+    background-color: #fff;
+  }
+  
+  /* Error state */
+  .inputError {
+    border: 1px solid #ef4444 !important;
+    background-color: #fef2f2;
+  }
+  
+  .inputPWD {
+    position: relative;
+    width: 100%;
+  }
+  
+  .faEye {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  /* Changed from 'button' tag to class */
+  .submitButton {
+    background: #3692ff;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 16px;
+    width: 100%;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .submitButton:hover {
+    background-color: #1967d6;
+  }
+  
+  .errorMessage {
+    color: #ef4444;
+    font-size: 14px;
+    min-height: 20px;
+    margin-bottom: 4px;
+    display: none; /* Hidden by default */
+  }
+  
+  .showError {
+    display: block; /* Show only when error exists */
+  }
+  
+  /* Social Login */
+  .socialLogin {
+    background-color: #E6F2FF;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1F2937;
+    padding: 16px 23px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  
+  .socialLoginButton {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .membership {
+    font-size: 14px;
+    color: #1F2937;
+    text-align: center;
+  }
+  
+  .membership a {
+    color: #3182f6;
+    text-decoration: underline;
+    margin-left: 5px;
+  }
